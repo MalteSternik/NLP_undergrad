@@ -102,7 +102,7 @@ def generate(start_word:str,input_dict:dict, iterations = 20, finishing_sequence
         sentence += " " + pick
         # set the actual word to the pick
         actual_word = pick
-        # when the actual pick is a finishing sequence break the loop
+        # when ShiShthe actual pick is a finishing sequence break the loop
         if pick == finishing_sequence: break
 
     # return created sentence
@@ -124,11 +124,9 @@ def run_script() -> None:
 
     transitions = ast.literal_eval(file)
     
-    print("Starting program... " + "\n")
     # call and print word generator, call "initialize_word()" to create starting_word
     print(generate(start_word = initialize_word(list(transitions.keys())),iterations=20, input_dict = transitions, showlog=True))
 
-    print("\nFinished.")
 
 
 
@@ -138,10 +136,9 @@ def run_script() -> None:
 ###########################################################
 
 if __name__ == "__main__":
-    
-    
-    # Funktion, die alle weiteren Funktionen aufruft
-    run_script()
 
+    print("Starting program... " + "\n")
+    run_script()
+    print("\nFinished.")
 
 
