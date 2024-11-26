@@ -15,7 +15,7 @@ import random
 ###############
 
 
-def sampling_pick(probabilities:dict, print_trace:bool):
+def sampling_pick(probabilities:dict, print_trace:bool = False):
     """
     Returns a pick from a dictionary containing strings as keys and probabilities as values,\n
     as an sampling algorithm\n
@@ -84,6 +84,7 @@ def generate(start_word:str,input_dict:dict, iterations = 20, finishing_sequence
     \tword_list (list) specified list to choose from
     \titerations* (int) max word limit for sentence
     \tfinishing_sequence* (str) specified list to choose from
+    \tshowlog* (str) specifies if log should be printed to console
     Output:\n
     \tsentence (str) final generated string sequence
     """
