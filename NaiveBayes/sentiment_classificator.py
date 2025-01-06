@@ -169,7 +169,7 @@ if __name__ == "__main__":
         }
     
     # Test-string to be classified
-    test_document = "predictable with no fun"
+    test_document = "fun fun fun fun"
     
     # calling main-function and passing arguments
     run_script(D = movie_reviews, testdoc = test_document)
