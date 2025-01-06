@@ -116,10 +116,10 @@ def generate(start_word:str,input_dict:dict, iterations = 20, finishing_sequence
 
 def run_script() -> None:
 
-    # 1. Einlesen der Übergangswahrscheinlichkeiten
+    # reading probabilities
     # dict transitions:
-    # key: erstes Wort
-    # val: dict with key: nächstes Wort, val: Wahrscheinlichkeit
+    # key: first token
+    # val: dict with key: next word, val: probability for next word to occur when first token is already picked
     with open("nzz_transition_probs.dic", encoding="utf-8", mode="r") as f:
         file = f.read()
 
@@ -127,6 +127,7 @@ def run_script() -> None:
     
     # call and print word generator, call "initialize_word()" to create starting_word
     print(generate(start_word = initialize_word(list(transitions.keys())),iterations=20, input_dict = transitions, showlog=True))
+
 
 
 
